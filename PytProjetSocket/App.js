@@ -1,10 +1,12 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-
+import { StyleSheet, View } from 'react-native';
+import UserCard from './Components/User/UserCard';
+import UserResearch from './Components/User/UserResearch'
 export default function App() {
+  const users = ['Salma', 'Valerie', 'Lucas', 'Justine'];
   return (
     <View style={styles.container}>
-      <Text>Open up App.js to start working on your app!</Text>
+      <UserResearch users={users}/>
       <StatusBar style="auto" />
     </View>
   );
