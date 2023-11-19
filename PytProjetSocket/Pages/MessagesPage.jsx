@@ -37,7 +37,7 @@ const MessagesPage = () => {
         <View style={styles.header2}>
           <Text style={styles.title}>Messages</Text>
         </View>
-          <TouchableOpacity style={styles.myProfil}></TouchableOpacity>
+        <TouchableOpacity style={styles.myProfil} onPress={navigateToMyProfile}></TouchableOpacity>
       </View>
       <View style={{
         width: '100%',
