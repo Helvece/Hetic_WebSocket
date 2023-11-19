@@ -4,7 +4,7 @@ const UserCard = (props) => {
     return(
         <View style={Styles.UserCard}>
             <View style={Styles.Profil}></View>
-            <Text>{props.username}</Text>
+            <Text style={Styles.userList} >{props.username}</Text>
         </View>
     )
 }
@@ -13,7 +13,7 @@ const Styles = {
         padding: 10,
         display:'flex',
         flexDirection:'row',
-        alignItems:'center'
+        alignItems: 'center',
     },
     Profil:{
         height:30,
@@ -21,6 +21,9 @@ const Styles = {
         borderRadius:50,
         backgroundColor:'#6930C3',
         margin:10
+    },
+    userList: {
+        color: 'white'
     }
 }
 export default UserCard;
