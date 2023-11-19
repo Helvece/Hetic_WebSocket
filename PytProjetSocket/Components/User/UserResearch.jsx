@@ -1,7 +1,7 @@
 import UserCard from './UserCard'
 import * as React from 'react';
 import { Searchbar } from 'react-native-paper';
-import { View, Text } from "react-native";
+import { View, Text, StyleSheet } from "react-native";
 
 const UserResearch = (Props) => {
     
@@ -9,20 +9,27 @@ const UserResearch = (Props) => {
 
     const onChangeSearch = query => setSearchQuery(query);
     return(
-        <View>
+        <View style={styles.container}>
             <View>
                 <Searchbar
-                    placeholder="Search User"
+                    placeholder="Search a user"
                     onChangeText={onChangeSearch}
                     value={searchQuery}
                 />
             </View>
             {Props.users.map((index,value) => (
                 <View key={value}>
-                    <UserCard username={index}/>
+                    <UserCard username={index} />
                 </View>
             ))}
         </View>
     );
 };
+
+const styles = StyleSheet.create({
+    container: {
+        padding: 10,
+    },
+})
+
 export default UserResearch;
